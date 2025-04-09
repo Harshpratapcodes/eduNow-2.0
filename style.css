@@ -1,0 +1,113 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%; /* Ensure it takes full width of its container */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center;
+    overflow: hidden; /* Prevent overflow on hover */
+}
+
+.banner-image {
+    width: 90%; /* Start slightly smaller */
+    max-width: 600px; /* Maximum width */
+    height: 70%; /* Maintain aspect ratio */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: width 0.5s ease, transform 0.5s ease, opacity 0.3s ease;
+}
+
+.banner-image:hover {
+    width: 100%; /* Expand to full container width */
+    max-width: 100%; /* Ensure full fit */
+    transform: scale(1); /* Prevent additional scaling */
+    opacity: 1; /* Keep full opacity */
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+.animate-fadeIn { animation: fadeIn 1.5s ease-in-out; }
+.animate-slideIn { animation: slideIn 1s ease-in-out; }
+.animate-bounce { animation: bounce 1.5s infinite; }
+
+/* animation Styling */
+svg#freepik_stories-college-students:not(.animated) .animable {
+    opacity: 0;
+}
+
+svg#freepik_stories-college-students.animated #freepik--background-complete--inject-27 {
+    animation: 1.5s Infinite linear floating;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-college-students.animated #freepik--College--inject-27 {
+    animation: 1.5s Infinite linear floating;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-college-students.animated #freepik--Trees--inject-27 {
+    animation: 1.5s Infinite linear floating;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-college-students.animated #freepik--Plants--inject-27 {
+    animation: 1.5s Infinite linear floating;
+    animation-delay: 0s;
+}
+
+@keyframes floating {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+}
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    width: 130px;
+    height: auto;
+    background: none;
+}
+
+#small_u{
+    width: 1000px;
+}
+
