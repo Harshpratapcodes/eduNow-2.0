@@ -38,4 +38,22 @@ if (e.target === modal) {
 }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("scroll-header");
+    const services = document.getElementById("services");
+
+    const servicesTop = services.offsetTop;
+
+    // Initially hide the header
+    header.classList.add("hidden");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY >= servicesTop - 100) {
+            header.classList.remove("hidden");
+        } else {
+            header.classList.add("hidden");
+        }
+    });
+});
+
 
